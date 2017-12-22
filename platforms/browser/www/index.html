@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<!-- werden benötigt -->
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList"></script>
+		<!-- Open Layers JS -->
+	<script type="text/javascript" src="lib/ol/build/ol.js"></script>
+	<script type="text/javascript" src="lib/xml.js"></script>
+		<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery321.js"></script>
+		<!-- Open Layers CSS -->
+	<link rel="stylesheet" type="text/css" href="lib/ol/css/ol.css">	
+		<!-- Bootstrap  -->
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap.css">
+		<!-- Eigene -->
+	<script type="text/javascript" src="js/geolocation.js"></script>
+	<script type="text/javascript" src="js/openlayers.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/openlayers.css">
+
+	<title>CordoGis</title>
+</head>
+<body>
+
+	<div id="root">
+		<div id="sidenav" class="sidenav">
+			<div class="app">
+				
+				<div id="deviceready" class="blink">
+					<button id="settingChangeBtn">Einstellungen</button>
+					<p class="event listening">L</p>
+					<p class="event received">R</p>
+				</div>		
+			</div>
+
+
+			<div>			
+				<button id="focus">Focus Position</button>
+				<button id="showPosition">Position anzeigen</button>
+				<button id="kooFeature">Punktfeature</button>
+				<button id="nPointFeature">Add NPoint Feature</button>
+				<button id="createPointList">Punktliste erzeugen</button>
+				<button id="sendWFST">WFS-T</button>
+				
+
+			</div>
+		</div>
+		
+		<div id="main" class="main">
+			<div id="map" class="map" tabindex="0"></div>
+			<div id="popup" class="ol-popup">
+				<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+				<div id="pc-viewFeatureInfo">
+					<h3>Feature Info:</h3>
+					<span>Latitude: </span><span id=pc-viewFeatureInfo-lat></span></br>
+					<span>Longitude: </span><span id=pc-viewFeatureInfo-lon></span></br>
+					<span>ID: </span><span id=pc-viewFeatureInfo-time_utc></span></br>
+					<h4>Sonstiges</h4>
+					<span>Genauigkeit: </span><span id=pc-viewFeatureInfo-acc></span></br>
+					<span>Nutzungsart: </span><span id=pc-viewFeatureInfo-nutzungsart></span></br>
+             		<span>Aufgenommen: </span><span id=pc-viewFeatureInfo-Zeit></span></br>	
+             		
+             		<form action="#">
+      					<label>Nutzungsart:
+       						 <select id="dd-pc-ViewFeatureInfo" name="nutzungsart">
+       						 	<option value="leer"     	       ></option>
+       						 	<option value="keine_na"           >Keine Nutzungsart</option>
+          						<option value="siedlung"           >Siedlung</option>
+          						<option value="industrie"          >Industrie</option>
+          						<option value="verkehr"            >Verkehr</option>
+          						<option value="sport_und_freizeit" >Sport und Freizeit</option>
+         					 	<option value="landwirtschaft"     >Landwirtschaft</option>
+         					 	<option value="gruenland"          >Grünland</option>
+         					 	<option value="wald"               >Wald</option>
+         					 	<option value="wein"               >Wein</option>
+         					 	<option value="see"                >See</option>
+         					 	<option value="fluesse"            >Fließgewässer</option>
+         					 	<option value="sonstiges"          >sonstige Flächen</option>
+        					</select>
+      					</label>
+    				</form>	
+    				
+    				<button id="dd-save">Speichern</button>
+    				<button id="dd-delete">Löschen</button>
+    				
+    				
+    				
+				</div>
+
+			</div>		
+			<div id="kooPos" class="koo_vis">Noch kein Satellit empfangen</div>			
+		</div>
+		
+		
+		<div id="settingstab" class="settingstab">
+			<div id="focusSettings" class="focusSettings">
+				<div class="fs-ItemList">
+					<ol id="point-feature-list">
+						
+					</ol>
+				</div>	
+			</div>	
+		
+		</div>
+	
+	</div>
+</body>
+</html>

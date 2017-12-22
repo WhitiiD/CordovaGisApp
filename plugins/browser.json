@@ -1,0 +1,25 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "cordova.gis.app"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "cordova.gis.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "cordova.gis.app"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "cordova.gis.app"
+    }
+  }
+}

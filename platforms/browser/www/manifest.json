@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "CordoGis",
+  "short_name": "CordoGis",
+  "version": "cordova.gis.app",
+  "description": "A sample Apache Cordova application that responds to the deviceready\n\t\tevent.",
+  "author": "Eclipse.org - Thym",
+  "icons": [],
+  "start_url": "index.html"
+}

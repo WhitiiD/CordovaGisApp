@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+
+/* Klasse: .      ID: #                */
+
+body {
+   
+    background-color:#ff00ff;
+    height:100%;
+    width:100%;
+}
+
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:5px;  
+    color:#FFFFFF;
+    font-size:12px;
+    margin: 0px 80px;/*0px 50px*/
+    padding:2px 5px;
+    text-align: center;
+}
+
+.event.listening {
+    background-color:#ff0000;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+
+
+ /* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 200px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/  
+    padding-top: 0px; /* Place content 60px from the top */
+}
+
+
+
+
+.main {
+	height: 100%; /* 100% Full-height */
+    width: 100%;
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 200px;
+    background-color: #0000ff; /* Blau*/ 
+    padding-top: 0px; /* Place content 0px from the top */
+    		
+}
+
+
+
+
+
+.settingstab {
+	height: 100%; /* 100% Full-height */
+    width: 100%;
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 200px;
+    background-color: #8080ff; /* Blau*/  
+    padding-top: 0px; /* Place content 0px from the top */	
+    		
+}
+
+.fs-ItemList{
+	height: 80%; /* 100% Full-height */
+    width: 100%;
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 300px;
+    background-color: #c0c0c0; /* Blau*/  
+    padding-top: 0px; /* Place content 0px from the top */	
+	
+}
+
+
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} 
+
+.koo_vis {	
+	height: 15px;
+    width: 400px;
+    z-index: 1; /* Stay on top */
+    bottom: 0px;
+    left: 200px;
+    background-color: #00ff00; /* gr�n*/  
+    opacity: 0.5;
+    padding-top: 0px;
+    font-size: 12px;
+    text-color: #000000;
+    border-radius:5px;
+    text-align: center;
+    position: fixed;
+}
+
+
+
+#map {
+        		height: 100%;
+}
+
+ a.skiplink {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+      }
+      a.skiplink:focus {
+        clip: auto;
+        height: auto;
+        width: auto;
+        background-color: #fff;
+        padding: 0.3em;
+      }
+      #map:focus {
+        outline: #4A74A8 solid 0.15em;
+      }
+      
+      /*Style f�r Drop-down menu*/
+      
+      .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.show {display:block;}
+     
